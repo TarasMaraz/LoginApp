@@ -2,8 +2,7 @@
 //  LoginViewController.swift
 //  LoginApp
 //
-//  Created by Alexey Efimov on 19/06/2019.
-//  Copyright © 2019 Alexey Efimov. All rights reserved.
+// Created by Тарас Панин on 30.05.2021.
 //
 
 import UIKit
@@ -15,31 +14,59 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     // MARK: - Private properties
-    private let user = "User"
-    private let password = "Password"
+    private var user: UserData!
+    private let storage = Storage.shared
     
     // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+        guard let tapBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tapBarController.viewControllers else {return}
+        
+        for controller in viewControllers {
+            switch controller {
+            case let welcomVC as WelcomeViewController:
+                welcomVC.userWelcomName = user.name
+                
+            case let navigationViewController as UINavigationController:
+                 let navigationViewControllers = navigationViewController.viewControllers
+                guard let infoVC = navigationViewControllers.first as? UserInfoViewController else { return }
+                infoVC.userName = user.userInfo
+                storage.myPhoto = user.photo
+                
+            default:
+                break
+            }
+            
+        }
+        
     }
     
     // MARK: IBActions
     @IBAction func logInPressed() {
-        if userNameTextField.text != user || passwordTextField.text != password {
+        guard let newUser = storage.users[userNameTextField.text!] else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
-                textField: passwordTextField
+                textField: userNameTextField
             )
             return
+        }
+        if newUser.password == passwordTextField.text! {
+            user = newUser
+            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        } else {
+            showAlert(
+                title: "Invalid password",
+                message: "Please, enter correct password",
+                textField: passwordTextField
+            )
         }
     }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
-        sender.tag == 0
-            ? showAlert(title: "Oops!", message: "Your name is \(user) 😉")
-            : showAlert(title: "Oops!", message: "Your password is \(password) 😉")
+        sender.tag == 10
+            ? showAlert(title: "Oops!", message: "Your name is \(storage.users["Taras"]!.login) 😉")
+            : showAlert(title: "Oops!", message: "Your password is \(storage.users["Taras"]!.password) 😉")
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
@@ -73,8 +100,10 @@ extension LoginViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else {
             logInPressed()
-            performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         }
         return true
     }
+    
+   
 }
+

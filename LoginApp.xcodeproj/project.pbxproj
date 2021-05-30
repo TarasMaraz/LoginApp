@@ -15,6 +15,8 @@
 		A878C8B822BA312F00310910 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A878C8B722BA312F00310910 /* WelcomeViewController.swift */; };
 		A92620FF26639C6E0009302F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92620FE26639C6E0009302F /* UserInfoViewController.swift */; };
 		A926210326639D8A0009302F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926210226639D8A0009302F /* PhotoViewController.swift */; };
+		A950DCD52663D6C300BBA58D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A950DCD42663D6C300BBA58D /* Storage.swift */; };
+		A950DCD82663E43D00BBA58D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A950DCD72663E43D00BBA58D /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A878C8B722BA312F00310910 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A92620FE26639C6E0009302F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		A926210226639D8A0009302F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		A950DCD42663D6C300BBA58D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		A950DCD72663E43D00BBA58D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				A878C8AC22BA308100310910 /* Assets.xcassets */,
+				A950DCD42663D6C300BBA58D /* Storage.swift */,
+				A950DCD72663E43D00BBA58D /* UserData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A950DCD52663D6C300BBA58D /* Storage.swift in Sources */,
 				A92620FF26639C6E0009302F /* UserInfoViewController.swift in Sources */,
+				A950DCD82663E43D00BBA58D /* UserData.swift in Sources */,
 				A878C8B822BA312F00310910 /* WelcomeViewController.swift in Sources */,
 				A878C8A822BA308000310910 /* LoginViewController.swift in Sources */,
 				A878C8A622BA308000310910 /* AppDelegate.swift in Sources */,

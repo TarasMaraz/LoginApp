@@ -3,9 +3,19 @@
 //  LoginApp
 //
 //  Created by Тарас Панин on 30.05.2021.
-//  Copyright © 2021 Alexey Efimov. All rights reserved.
+//  
 //
 
 import UIKit
 
-
+class PhotoViewController: UIViewController {
+    
+    @IBOutlet var firstPhoto: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        firstPhoto.image = Storage.shared.myPhoto
+    }
+    
+    
+}

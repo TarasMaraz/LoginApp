@@ -2,9 +2,7 @@
 //  WelcomeViewController.swift
 //  LoginApp
 //
-//  Created by Alexey Efimov on 19/06/2019.
-//  Copyright © 2019 Alexey Efimov. All rights reserved.
-//
+// Created by Тарас Панин on 30.05.2021.
 
 import UIKit
 
@@ -12,7 +10,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     
-    var user = ""
+    var userWelcomName = ""
     
     private let primaryColor = UIColor(
         red: 210/255,
@@ -30,7 +28,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        welcomeLabel.text = "Welcome, \(user)!"
+        welcomeLabel.text = "Welcome, \(userWelcomName)!"
     }
 
 }
@@ -47,3 +45,6 @@ extension UIView {
         layer.insertSublayer(gradient, at: 0)
     }
 }
+
+
+
