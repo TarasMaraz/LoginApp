@@ -13,6 +13,8 @@
 		A878C8AD22BA308100310910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A878C8AC22BA308100310910 /* Assets.xcassets */; };
 		A878C8B022BA308100310910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A878C8AE22BA308100310910 /* LaunchScreen.storyboard */; };
 		A878C8B822BA312F00310910 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A878C8B722BA312F00310910 /* WelcomeViewController.swift */; };
+		A92620FF26639C6E0009302F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92620FE26639C6E0009302F /* UserInfoViewController.swift */; };
+		A926210326639D8A0009302F /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926210226639D8A0009302F /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A878C8AF22BA308100310910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A878C8B122BA308100310910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A878C8B722BA312F00310910 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A92620FE26639C6E0009302F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		A926210226639D8A0009302F /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		A878C8A422BA308000310910 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				A92620FC2663982A0009302F /* SupportingFiles */,
+				A92620FB2663980E0009302F /* Resources */,
+				A92620FA266397C80009302F /* Storyboards */,
+				A92620F9266397950009302F /* ViewControllers */,
 				A878C8A522BA308000310910 /* AppDelegate.swift */,
-				A878C8A722BA308000310910 /* LoginViewController.swift */,
-				A878C8B722BA312F00310910 /* WelcomeViewController.swift */,
-				A878C8A922BA308000310910 /* Main.storyboard */,
-				A878C8AC22BA308100310910 /* Assets.xcassets */,
-				A878C8AE22BA308100310910 /* LaunchScreen.storyboard */,
 				A878C8B122BA308100310910 /* Info.plist */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		A92620F9266397950009302F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A878C8A722BA308000310910 /* LoginViewController.swift */,
+				A878C8B722BA312F00310910 /* WelcomeViewController.swift */,
+				A92620FE26639C6E0009302F /* UserInfoViewController.swift */,
+				A926210226639D8A0009302F /* PhotoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A92620FA266397C80009302F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A878C8AE22BA308100310910 /* LaunchScreen.storyboard */,
+				A878C8A922BA308000310910 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A92620FB2663980E0009302F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A878C8AC22BA308100310910 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A92620FC2663982A0009302F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92620FF26639C6E0009302F /* UserInfoViewController.swift in Sources */,
 				A878C8B822BA312F00310910 /* WelcomeViewController.swift in Sources */,
 				A878C8A822BA308000310910 /* LoginViewController.swift in Sources */,
 				A878C8A622BA308000310910 /* AppDelegate.swift in Sources */,
+				A926210326639D8A0009302F /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
