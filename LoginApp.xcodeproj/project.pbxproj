@@ -64,12 +64,11 @@
 		A878C8A422BA308000310910 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
+				A97D94B326655075003CF3E6 /* Models */,
 				A92620FC2663982A0009302F /* SupportingFiles */,
 				A92620FB2663980E0009302F /* Resources */,
 				A92620FA266397C80009302F /* Storyboards */,
 				A92620F9266397950009302F /* ViewControllers */,
-				A878C8A522BA308000310910 /* AppDelegate.swift */,
-				A878C8B122BA308100310910 /* Info.plist */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -98,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				A878C8AC22BA308100310910 /* Assets.xcassets */,
-				A950DCD42663D6C300BBA58D /* Storage.swift */,
-				A950DCD72663E43D00BBA58D /* UserData.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -107,8 +104,19 @@
 		A92620FC2663982A0009302F /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A878C8A522BA308000310910 /* AppDelegate.swift */,
+				A878C8B122BA308100310910 /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A97D94B326655075003CF3E6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A950DCD42663D6C300BBA58D /* Storage.swift */,
+				A950DCD72663E43D00BBA58D /* UserData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +147,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1240;
-				ORGANIZATIONNAME = "Alexey Efimov";
+				ORGANIZATIONNAME = "Taras Panin";
 				TargetAttributes = {
 					A878C8A122BA308000310910 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -338,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GBTTU32HS2;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -357,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GBTTU32HS2;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

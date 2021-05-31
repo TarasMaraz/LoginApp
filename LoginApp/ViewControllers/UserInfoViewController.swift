@@ -14,9 +14,13 @@ class UserInfoViewController: UIViewController {
     
     var userName: String!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         userInfo.text = userName
     }
-    
+  
 }
+

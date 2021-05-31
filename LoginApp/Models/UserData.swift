@@ -3,7 +3,7 @@
 //  LoginApp
 //
 //  Created by Тарас Панин on 30.05.2021.
-//  Copyright © 2021 Alexey Efimov. All rights reserved.
+// 
 //
 
 import UIKit
@@ -15,6 +15,7 @@ struct UserData {
     let userInfo: String
     let photo: UIImage?
 }
+
 
 
 let taras = UserData(login: "Taras", password: "123", name: "Taras Panin", userInfo: "Taras Panin \nAge: 26 \nMy hobby: Snowboard \n ", photo: UIImage(named: "tarasPhoto") )
